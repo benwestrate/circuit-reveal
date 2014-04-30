@@ -1,0 +1,68 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// This file has been copied over from
+// ../../bower_components/reveal.js/css/theme/source/default.scss
+
+// Default mixins and settings -----------------
+@import "mixins";
+@import "settings";
+// ---------------------------------------------
+
+
+
+// Theme template ------------------------------
+@import "typography";
+@import "header";
+@import "footer";
+@import "titleSlide";
+
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: $linkColor;
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: $linkColor;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: $linkColor;
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: $linkColor;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: $linkColorHover;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: $linkColorHover;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: $linkColorHover;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: $linkColorHover;
+}
+
+// ---------------------------------------------
+
+
+// See ../../bower_components/reveal.js/css/theme/README.md
+// for further explanations on how reveal.js themes work.
