@@ -1,4 +1,30 @@
-# Reveal.js generator
+# Circuit Reveal
+
+An extension of [Reveal.js generator](https://github.com/slara/generator-reveal). With specific styling for the CIRCUIT Conference.
+
+## How to use CIRCUIT Reveal
+
+Install:
+* clone the repository
+* make sure you have the [node.js](http://nodejs.org/) installed
+* run the following in your repository folder
+```
+npm install
+```
+* follow the steps to install [the reveal-generator](#usage)
+* add your presentation information to the presentationInfo.json
+
+```
+{
+    "presentationTitle"        : "Your Presentation Title Goes Here",
+    "presentationDate"         : "Your Presentation date goes here eg (June 4th 2014)",
+    "presentationHashTag"      : "#PresentationHashTag",
+    "presentersName"           : "Your Name",
+    "presentersTwitterHandle"  : "@TwitterHandle"
+}
+```
+
+## Reveal.js generator
 
 A [Yeoman](http://yeoman.io) generator for the awesome [Reveal.js](http://lab.hakim.se/reveal-js/) presentation framework.
 
@@ -6,12 +32,7 @@ A [Yeoman](http://yeoman.io) generator for the awesome [Reveal.js](http://lab.ha
 
 Install:  `npm install -g generator-reveal`
 
-Make a new directory, and `cd` into it:
-```
-mkdir my-new-project && cd $_
-```
-
-Run `yo reveal` and start building your presentation.
+Start building your presentation.
 
 After all files are created you can view your slides with `grunt`:
 
@@ -19,7 +40,13 @@ After all files are created you can view your slides with `grunt`:
 grunt server
 ```
 
-Then, create further slides with `yo reveal:slide more-content`. See below for available [options](#options). When you want to export your presentation to some static HTML server, you can type `grunt dist` to have all your relevant files saved to the `dist` directory.
+Then, create further slides with:
+
+```bash
+yo reveal:slide more-content
+```
+
+See below for available [options](#options). When you want to export your presentation to some static HTML server, you can type `grunt dist` to have all your relevant files saved to the `dist` directory.
 
 ## Generators
 
