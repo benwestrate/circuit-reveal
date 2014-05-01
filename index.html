@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Test</title>
+        <title>Replace this title with your presentation title in presentationInfo.json</title>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -34,61 +34,86 @@
     </head>
 
     <body>
-        
+
         <div class="reveal">
+
             <header class="mainHeader clearfix">
+
                 <h2>CIRCUIT</h2>
+
                 <div class="secondary">
                     <h5> AN ADOBE DEVELOPER EVENT </h5>
                     <h5> PRESENTED BY CITYTECH, INC. </h5>
                 </div>
-                <div class="hashTag">
-                    <p> #CIRCUIT14 #PresentationHashTag </p>
-                </div>
-            </header>
-            <div class="slides">
-                <section data-background="#232A32" data-state="titleSlide" class="">
-                    <div class="titleSlide">
-                        <div class="brand">
-                            <h1>circuit</h1>
-                            <h3>AN ADOBE DEVELOPER EVENT</h3>
-                            <h3 class="citytech">PRESENTED BY CITYTECH, INC.</h3>
-                        </div>
 
-                        <div class="presentationInfo">
-                            <div class="presenter">
-                                <h2> John Doe </h2>
-                                <h3> @Handle </h3>
+                <div class="hashTag">
+                    <p> #CIRCUIT14 #replace </p>
+                </div>
+
+            </header>
+
+            <div class="slides">
+
+                <section data-background="#232A32" data-state="titleSlide">
+
+                    <div class="titleSlide">
+
+                        <div class="brandWrapper">
+
+                            <div class="brand">
+                                <h1>circuit</h1>
+                                <h3>AN ADOBE DEVELOPER EVENT</h3>
+                                <h3 class="citytech">PRESENTED BY CITYTECH, INC.</h3>
                             </div>
-                            <div class="presentation">
-                                <h4>  June 4th 2014  </h4>
-                                <h4> #CIRCUIT14  #PresentationHashTag  </h4>
+
+                            <div class="presentationInfo">
+
+                                <div class="presenter">
+                                    
+                                        <h2 class="long"> Replace this title with your presentation title in presentationInfo.json </h2>
+                                    
+                                </div>
+
+                                <div class="presentation">
+                                    <h4>  Your Name  </h4>
+                                    <h4>  @yourName  </h4>
+                                </div>
+
                             </div>
+
                         </div>
 
                     </div>
+
                 </section>
 
                 
+
                     
+
                         
     <section data-markdown="slides/index.md">
     </section>
 
 
+
                     
+
                     
+
                 
 
             </div>
+
             <footer class="mainFooter">
-                <h3> Desktop Development and AEM </h3>
+                <h3> Replace this title with your presentation title in presentationInfo.json </h3>
             </footer>
 
         </div>
 
         <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
         <script src="bower_components/reveal.js/js/reveal.min.js"></script>
+
         <script>
             // Configure Reveal
             // Full list of configuration options available here:
@@ -98,9 +123,14 @@
                 progress: true,
                 history: true,
                 center: true,
+                margin: 0,
+                width: '100%',
+
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
@@ -116,20 +146,25 @@
 
 
             Reveal.addEventListener( 'ready' , function( event ) {
-                console.log("title slide");
+
                 titleSlideToggle( );
+
             } );
 
             Reveal.addEventListener( 'titleSlide' , function( event ) {
-                console.log("title slide");
+
                 titleSlideToggle( );
+
             } );
 
             Reveal.addEventListener( 'slidechanged' , function( event ) {
+
                 titleSlideToggle( );
+
             } );
 
             function titleSlideToggle (  ) {
+
                 var mainHeader = document.querySelector(".mainHeader");
                 var mainFooter = document.querySelector(".mainFooter");
 
@@ -146,8 +181,11 @@
                 }
 
             }
+
         </script>
 
     </body>
 
 </html>
+
+

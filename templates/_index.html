@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Test</title>
+        <title><%= presentationInfo.presentationTitle %></title>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -34,55 +34,88 @@
     </head>
 
     <body>
-        <% slides[0] %>
+
         <div class="reveal">
+
             <header class="mainHeader clearfix">
+
                 <h2>CIRCUIT</h2>
+
                 <div class="secondary">
                     <h5> AN ADOBE DEVELOPER EVENT </h5>
                     <h5> PRESENTED BY CITYTECH, INC. </h5>
                 </div>
+
                 <div class="hashTag">
                     <p> #CIRCUIT14 <%= presentationInfo.presentationHashTag %> </p>
                 </div>
-            </header>
-            <div class="slides">
-                <section data-background="#232A32" data-state="titleSlide" class="">
-                    <div class="titleSlide">
-                        <div class="brand">
-                            <h1>circuit</h1>
-                            <h3>AN ADOBE DEVELOPER EVENT</h3>
-                            <h3 class="citytech">PRESENTED BY CITYTECH, INC.</h3>
-                        </div>
 
-                        <div class="presentationInfo">
-                            <div class="presenter">
-                                <h2> <%= presentationInfo.presentersName %> </h2>
-                                <h3> <%= presentationInfo.presentersTwitterHandle %> </h3>
+            </header>
+
+            <div class="slides">
+
+                <section data-background="#232A32" data-state="titleSlide">
+
+                    <div class="titleSlide">
+
+                        <div class="brandWrapper">
+
+                            <div class="brand">
+                                <h1>circuit</h1>
+                                <h3>AN ADOBE DEVELOPER EVENT</h3>
+                                <h3 class="citytech">PRESENTED BY CITYTECH, INC.</h3>
                             </div>
-                            <div class="presentation">
-                                <h4>  <%= presentationInfo.presentationDate %>  </h4>
-                                <h4> #CIRCUIT14  <%= presentationInfo.presentationHashTag %>  </h4>
+
+                            <div class="presentationInfo">
+
+                                <div class="presenter">
+                                    <% if( presentationInfo.presentationTitle.length > 40 ) { %>
+                                        <h2 class="long"> <%= presentationInfo.presentationTitle %> </h2>
+                                    <% } else { %>
+                                        <h2> <%= presentationInfo.presentationTitle %> </h2>
+                                        <h2> <%= presentationInfo.presentationDate %> </h2>
+                                    <% } %>
+                                </div>
+
+                                <div class="presentation">
+                                    <h4>  <%= presentationInfo.presentersName %>  </h4>
+                                    <h4>  <%= presentationInfo.presentersTwitterHandle %>  </h4>
+                                </div>
+
                             </div>
+
                         </div>
 
                     </div>
+
                 </section>
 
                 <% _.forEach(slides, function(slide) { %>
+
                     <% if (!_.isArray(slide)) { %>
+
                         <%= section(slide) %>
+
                     <% } %>
+
                     <% if (_.isArray(slide)) { %>
+
                         <section>
+
                             <% _.forEach(slide, function(verticalslide) { %>
+
                                 <%= section(verticalslide) %>
+
                             <% }); %>
+
                         </section>
+
                     <% } %>
+
                 <% }); %>
 
             </div>
+
             <footer class="mainFooter">
                 <h3> <%= presentationInfo.presentationTitle %> </h3>
             </footer>
@@ -91,6 +124,7 @@
 
         <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
         <script src="bower_components/reveal.js/js/reveal.min.js"></script>
+
         <script>
             // Configure Reveal
             // Full list of configuration options available here:
@@ -100,9 +134,14 @@
                 progress: true,
                 history: true,
                 center: true,
+                margin: 0,
+                width: '100%',
+
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
@@ -118,20 +157,25 @@
 
 
             Reveal.addEventListener( 'ready' , function( event ) {
-                console.log("title slide");
+
                 titleSlideToggle( );
+
             } );
 
             Reveal.addEventListener( 'titleSlide' , function( event ) {
-                console.log("title slide");
+
                 titleSlideToggle( );
+
             } );
 
             Reveal.addEventListener( 'slidechanged' , function( event ) {
+
                 titleSlideToggle( );
+
             } );
 
             function titleSlideToggle (  ) {
+
                 var mainHeader = document.querySelector(".mainHeader");
                 var mainFooter = document.querySelector(".mainFooter");
 
@@ -148,8 +192,11 @@
                 }
 
             }
+
         </script>
 
     </body>
 
 </html>
+
+

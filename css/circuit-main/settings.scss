@@ -24,9 +24,11 @@ $heading1TextShadow: none;
 // Links and actions
 $linkColor: #F2B348;
 $linkColorHover: lighten( $linkColor, 20% );
+$linkColorDark: $headingColor;
+$linkColorDarkHover: lighten( $linkColorDark, 5% );
 
 // Text selection
-$selectionBackgroundColor: #FF5E99;
+$selectionBackgroundColor: #F2B348;
 $selectionColor: #fff;
 
 // Generates the presentation background, can be overridden

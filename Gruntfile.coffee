@@ -21,6 +21,7 @@ module.exports = (grunt) ->
                     'templates/_index.html'
                     'templates/_section.html'
                     'slides/list.json'
+                    'presentationInfo.json'
                 ]
                 tasks: ['buildIndex']
 
@@ -33,14 +34,16 @@ module.exports = (grunt) ->
                 tasks: ['jshint']
         
             sass:
-                files: ['css/source/*.scss']
+                files: ['css/circuit-main/*.scss'
+                        'css/custom-presentation-styles/*.css'
+                        'css/custom-presentation-styles/*.scss']
                 tasks: ['sass']
 
         sass:
 
             theme:
                 files:
-                    'css/theme.css': 'css/source/theme.scss'
+                    'css/theme.css': 'css/circuit-main/theme.scss'
         
         connect:
 

@@ -3,14 +3,14 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-.clearfix, header.mainHeader, .reveal .titleSlide {
+.clearfix, header.mainHeader, .reveal .titleSlide .brandWrapper {
   zoom: 1; }
-  .clearfix:before, header.mainHeader:before, .reveal .titleSlide:before, .clearfix:after, header.mainHeader:after, .reveal .titleSlide:after {
+  .clearfix:before, header.mainHeader:before, .reveal .titleSlide .brandWrapper:before, .clearfix:after, header.mainHeader:after, .reveal .titleSlide .brandWrapper:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, header.mainHeader:after, .reveal .titleSlide:after {
+  .clearfix:after, header.mainHeader:after, .reveal .titleSlide .brandWrapper:after {
     clear: both; }
 
 .hide {
@@ -38,7 +38,8 @@
 .reveal {
   font-family: "Museo Slab", Serif; }
   .reveal .slides {
-    text-align: left; }
+    text-align: left;
+    font-size: 1.6em; }
 
 header.mainHeader {
   background-color: #232a32;
@@ -73,7 +74,7 @@ footer.mainFooter {
 
 .reveal .titleSlide {
   width: 100%; }
-  .reveal .titleSlide .brand {
+  .reveal .titleSlide .brandWrapper .brand {
     -webkit-box-sizing: border-box;
     /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;
@@ -81,22 +82,21 @@ footer.mainFooter {
     box-sizing: border-box;
     float: left;
     padding: 0 25px 0 0;
-    border-right: 1px solid #ffffff;
-    width: 55%; }
-    .reveal .titleSlide .brand h1 {
+    border-right: 1px solid #ffffff; }
+    .reveal .titleSlide .brandWrapper .brand h1 {
       font-family: "brandon-grotesque", sans-serif;
       text-transform: uppercase;
-      font-size: 8em;
+      font-size: 5em;
       color: #ffffff; }
-    .reveal .titleSlide .brand h3 {
+    .reveal .titleSlide .brandWrapper .brand h3 {
       font-family: "brandon-grotesque", sans-serif;
       margin-left: 5px;
-      font-size: 2em;
+      font-size: 1.2em;
       color: #ffffff; }
-      .reveal .titleSlide .brand h3.citytech {
+      .reveal .titleSlide .brandWrapper .brand h3.citytech {
         color: #F2B348;
         margin-bottom: 0; }
-  .reveal .titleSlide .presentationInfo {
+  .reveal .titleSlide .brandWrapper .presentationInfo {
     -webkit-box-sizing: border-box;
     /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;
@@ -105,47 +105,78 @@ footer.mainFooter {
     float: left;
     margin-left: 25px;
     padding: 5px 0 0 0;
-    width: 40%; }
-    .reveal .titleSlide .presentationInfo h2, .reveal .titleSlide .presentationInfo h3, .reveal .titleSlide .presentationInfo h4 {
+    max-width: 54%; }
+    .reveal .titleSlide .brandWrapper .presentationInfo h2, .reveal .titleSlide .brandWrapper .presentationInfo h3, .reveal .titleSlide .brandWrapper .presentationInfo h4 {
       font-family: "museo-slab";
       text-transform: none;
-      margin: 10px 0 0 0;
+      margin: 0px 0 0 0;
       color: #C2C2C2; }
-    .reveal .titleSlide .presentationInfo h2 {
-      font-size: 2em; }
-    .reveal .titleSlide .presentationInfo h4 {
-      font-size: 1.5em;
-      color: #9F9F9F; }
-    .reveal .titleSlide .presentationInfo .presenter {
+    .reveal .titleSlide .brandWrapper .presentationInfo h2 {
+      font-size: 1.2em;
+      line-height: 1.32em; }
+      .reveal .titleSlide .brandWrapper .presentationInfo h2.long {
+        font-size: 1.1em; }
+    .reveal .titleSlide .brandWrapper .presentationInfo h4 {
+      font-size: 1em;
+      color: #9F9F9F;
+      margin-top: 10px; }
+    .reveal .titleSlide .brandWrapper .presentationInfo .presenter {
       margin-bottom: 60px; }
 
 /*********************************************
- * NAVIGATION CONTROLS
+ * TITLE SLIDE NAVIGATION CONTROLS
  *********************************************/
+.titleSlide .reveal .controls div.navigate-left,
+.titleSlide .reveal .controls div.navigate-left.enabled {
+  border-right-color: #f2b348; }
+.titleSlide .reveal .controls div.navigate-right,
+.titleSlide .reveal .controls div.navigate-right.enabled {
+  border-left-color: #f2b348; }
+.titleSlide .reveal .controls div.navigate-up,
+.titleSlide .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #f2b348; }
+.titleSlide .reveal .controls div.navigate-down,
+.titleSlide .reveal .controls div.navigate-down.enabled {
+  border-top-color: #f2b348; }
+.titleSlide .reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #f9dba7; }
+.titleSlide .reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #f9dba7; }
+.titleSlide .reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #f9dba7; }
+.titleSlide .reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #f9dba7; }
+
+/*********************************************
+* TITLE SLIDE NAVIGATION CONTROLS
+*********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #f2b348; }
+  border-right-color: #232a32; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #f2b348; }
+  border-left-color: #232a32; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #f2b348; }
+  border-bottom-color: #232a32; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #f2b348; }
+  border-top-color: #232a32; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #f9dba7; }
+  border-right-color: #2e3741; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #f9dba7; }
+  border-left-color: #2e3741; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #f9dba7; }
+  border-bottom-color: #2e3741; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #f9dba7; }
+  border-top-color: #2e3741; }
+
+.reveal .slides section {
+  padding: 20px; }

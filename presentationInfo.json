@@ -1,7 +1,7 @@
 {
-    "presentationTitle"        : "Desktop Development and AEM",
+    "presentationTitle"        : "Replace this title with your presentation title in presentationInfo.json",
     "presentationDate"         : "June 4th 2014",
-    "presentationHashTag"      : "#PresentationHashTag",
-    "presentersName"           : "John Doe",
-    "presentersTwitterHandle"  : "@Handle"
+    "presentationHashTag"      : "#replace",
+    "presentersName"           : "Your Name",
+    "presentersTwitterHandle"  : "@yourName"
 }
