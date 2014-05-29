@@ -12,6 +12,7 @@ Install:
 npm install
 ```
 * follow the steps to install [the reveal-generator](#usage)
+* run ``` bower install ```
 * add your presentation information to the presentationInfo.json
 
 ```
