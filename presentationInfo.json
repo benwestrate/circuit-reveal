@@ -1,7 +1,7 @@
 {
-    "presentationTitle"        : "Replace this title with your presentation title in presentationInfo.json",
-    "presentationDate"         : "June 4th 2014",
-    "presentationHashTag"      : "#replace",
-    "presentersName"           : "Your Name",
-    "presentersTwitterHandle"  : "@yourName"
+    "presentationTitle"        : "Desktop App Development and AEM",
+    "presentationDate"         : "June 5th 2014",
+    "presentationHashTag"      : "#DesktopAppDev",
+    "presentersName"           : "Ben Westrate",
+    "presentersTwitterHandle"  : "@BenWestrate"
 }

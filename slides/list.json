@@ -1,3 +1,20 @@
 [
-    "index.md"
+    [
+        "agenda.html",
+        "whatMakesADesktopApp.md",
+        "howDoesItWork.html"
+    ],
+    [
+        "appjs.html",
+        "brackets.html",
+        "node-webkit.html"
+    ],
+    [
+        "node-webkit-dip.md",
+        "node-webkit-manifest.md",
+        "node-webkit-index.md",
+        "PhotoSyncDemo.html"
+    ],
+    "aboutMe.html"
+
 ]
